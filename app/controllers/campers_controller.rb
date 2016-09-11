@@ -1,7 +1,7 @@
 class CampersController < ApplicationController
 
     def index
-      @campers = Camper.order(points: :desc)
+      @ranks_and_campers = Camper.get_rank_hash
     end
 
     def show

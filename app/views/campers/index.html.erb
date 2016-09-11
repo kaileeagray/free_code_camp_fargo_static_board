@@ -7,7 +7,7 @@
       <table class="table table-striped table-responsive">
         <thead>
           <tr>
-            <th>#</th>
+            <th>Rank</th>
             <th></th>
             <th>Username</th>
             <th>Points</th>
@@ -16,10 +16,12 @@
           </tr>
         </thead>
         <tbody>
-          <% @campers.each do |camper| %>
-            <tr>
-              <%= render camper %>
-            </tr>
+          <% @ranks_and_campers.each do |rank, campers| %>
+              <%campers.each do |camper|%>
+                <tr>
+                  <%= render :partial => camper, :locals => {:rank => rank} %>
+                </tr>
+              <%end%>
           <% end %>
         </tbody>
       </table>
