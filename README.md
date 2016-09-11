@@ -1,24 +1,10 @@
-# README
+### Free Code Camp | Fargo, ND Campsite | (unofficial) Camper Leaderboard
+ + Site to view daily leaderboard.
+ + Points are scraped from user profiles' on freecodecamp.com.
+ + Free Code Camp profiles are linked on leaderboard.
+ + Visit the Heroku site to add your username.
+ + Pull requests and improvements welcome!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ # Goals
+ + Add current points (points earned in the last 30 days) column to account for recent activity leaders.   
+ + Add sort by features, similar to [fcctop100](https://fcctop100.herokuapp.com).
