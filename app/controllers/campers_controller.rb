@@ -14,8 +14,7 @@ class CampersController < ApplicationController
 
     def create
       camper = Camper.create(camper_params)
-      camper.fcc_url_valid?
-      camper.save
+      camper.scrape_fcc
       redirect_to root_path
     end
 
