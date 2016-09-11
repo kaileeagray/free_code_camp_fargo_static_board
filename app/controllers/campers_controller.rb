@@ -13,7 +13,9 @@ class CampersController < ApplicationController
     end
 
     def create
-      @camper = Camper.find_or_create_by(camper_params)
+      camper = Camper.create(camper_params)
+      camper.fcc_url_valid?
+      camper.save
       redirect_to root_path
     end
 
@@ -27,14 +29,19 @@ class CampersController < ApplicationController
       redirect_to attraction_path(@attraction)
     end
 
+    def scrape_camper(camper)
+      camper.fcc_url_valid?
+    end
+
     private
 
     def camper_params
-      params.require(:camper).permit(:username, :points, :user_id)
+      params.require(:camper).permit(:fcc_username)
     end
 
     def find_camper
       @camper = Camper.find_by(id: params[:id])
     end
+
 
 end
