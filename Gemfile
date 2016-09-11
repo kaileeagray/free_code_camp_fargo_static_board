@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem "ranker"
-
+gem "nokogiri"
 # gem "pundit"
 # gem 'devise'
 gem 'autoprefixer-rails'

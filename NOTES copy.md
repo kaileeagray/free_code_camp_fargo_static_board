@@ -1,4 +1,6 @@
 
++ validate free code camp username on creation
++ show error message if scraping of user is not successful
 
 
 ## To dos:
@@ -61,4 +63,27 @@
 
 + scraping example: http://railscasts.com/episodes/190-screen-scraping-with-nokogiri?view=asciicast
 
-+
++ http://jsfiddle.net/b2m38br9/1/
++ grab img source http://stackoverflow.com/questions/23760751/how-to-get-the-img-src-using-nokogiri-and-at-css
+
+
+edit/delete admin buttons to add later
+<th>Edit</th>
+<th>Delete</th>
+
+<td>
+  <%= link_to edit_camper_path(camper), class: "btn btn-primary", remote: true do %>
+    <i class="glyphicon glyphicon-edit"></i>
+  <% end %>
+</td>
+
+<td>
+<div class="form">
+  <div class="form-group">
+      <%= link_to camper_path(camper), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", remote: true do %>
+        <i class="glyphicon glyphicon-trash"></i>
+      <% end %>
+  </div>
+</div>
+
+</td>

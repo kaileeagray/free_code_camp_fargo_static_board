@@ -377,6 +377,7 @@ DEPENDENCIES
   listen (= 3.0.8)
   mini_magick (= 4.5.1)
   minitest-reporters (= 1.1.9)
+  nokogiri
   pg (= 0.18.4)
   puma (= 3.4.0)
   rails (= 5.0.0.1)

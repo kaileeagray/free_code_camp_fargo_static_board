@@ -1,33 +1,36 @@
 <div class="container">
-  <div class="row">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3>Free Code Camp Fargo, ND Leaderboard</h3>
-      </div>
-      <table class="table table-striped table-responsive">
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th></th>
-            <th>Username</th>
-            <th>Points</th>
-            <th>Edit</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @ranks_and_campers.each do |rank, campers| %>
-              <%campers.each do |camper|%>
-                <tr>
-                  <%= render :partial => camper, :locals => {:rank => rank} %>
-                </tr>
-              <%end%>
-          <% end %>
-        </tbody>
-      </table>
-      <div class="panel-footer">
-        <p>Are you a Free Code Camp member from the Fargo-Moorhead area? <%= link_to "Add your username to this leaderboard!", new_camper_path%></p>
-      </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1 class="panel-title pull-left">Free Code Camp Fargo, ND Leaderboard</h1>
+                <%= link_to "Add your username to this leaderboard!", new_camper_path, :class => "btn btn-primary pull-right"%>
+                <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+
+                <table class="table table-striped table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th></th>
+                            <th>Username</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @ranks_and_campers.each do |rank, campers| %>
+                        <%campers.each do |camper|%>
+                        <tr>
+                            <%= render :partial => camper, :locals => {:rank => rank} %>
+                        </tr>
+                        <%end%>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <p>Rankings updated daily. Go to <%=link_to "Free Code Camp", href="http://www.freecodecamp.com", target: "_blank"%> to get closer to the top!</p>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

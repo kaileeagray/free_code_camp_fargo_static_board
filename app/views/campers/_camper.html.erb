@@ -2,7 +2,7 @@
   <%=rank%>
 </td>
 <td>
-  <%=image_tag("no-face.png",  width: '50', alt: "No face camper with laptop")%>
+  <%=image_tag(camper.avatar,  width: '50', alt: "camper avatar")%>
 </td>
 <td>
   <span><%= link_to camper.fcc_username, camper.fcc_url, :target => "_blank" %></span>
@@ -10,22 +10,4 @@
 
 <td>
   <%=camper.points || "0"%>
-</td>
-
-
-<td>
-  <%= link_to edit_camper_path(camper), class: "btn btn-primary", remote: true do %>
-    <i class="glyphicon glyphicon-edit"></i>
-  <% end %>
-</td>
-
-<td>
-<div class="form">
-  <div class="form-group">
-      <%= link_to camper_path(camper), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", remote: true do %>
-        <i class="glyphicon glyphicon-trash"></i>
-      <% end %>
-  </div>
-</div>
-
 </td>

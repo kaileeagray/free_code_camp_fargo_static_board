@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160911002003) do
+ActiveRecord::Schema.define(version: 20160911162440) do
 
   create_table "campers", force: :cascade do |t|
     t.string   "fcc_username"
-    t.integer  "points"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "points",       default: 0
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "avatar"
   end
 
 end

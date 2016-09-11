@@ -28,23 +28,6 @@ textarea {
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
-h2 {
-  letter-spacing: -0.5px;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -120,4 +103,12 @@ footer {
     color:  #ddd;
     font-size: 1.2em;
 
+}
+
+.panel-heading h1 {
+    white-space: nowrap;
+    font-size: 1.7em;
+
+    text-overflow: ellipsis;
+    padding-top: 8px;
 }

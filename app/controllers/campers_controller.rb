@@ -13,8 +13,8 @@ class CampersController < ApplicationController
     end
 
     def create
-      @camper = Camper.create(camper_params)
-      redirect_to camper_path(@camper)
+      @camper = Camper.find_or_create_by(camper_params)
+      redirect_to root_path
     end
 
     def edit
