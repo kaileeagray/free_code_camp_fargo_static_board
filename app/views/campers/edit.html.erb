@@ -1,0 +1,13 @@
+
+<td>
+  <%= form_for @camper, controller: 'campers', action: 'update' do |f| %>
+    <div class="form-group">
+      <%= f.label :fcc_username, "Update your Free Code Camp username!" %> <br>
+      <%= f.text_field :fcc_username %>
+    </div>
+
+    <div class="actions form-group">
+      <%= f.submit "Update Camper Profile", :class => 'btn btn-primary' %>
+    </div>
+
+  <% end %>

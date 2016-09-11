@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3>Free Code Camp Fargo, ND Leaderboard</h3>
+      </div>
+      <table class="table table-striped table-responsive">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th></th>
+            <th>Username</th>
+            <th>Points</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @campers.each do |camper| %>
+            <tr>
+              <%= render camper %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <div class="panel-footer">
+        <p>Are you a Free Code Camp member from the Fargo-Moorhead area? <%= link_to "Add your username to this leaderboard!", new_camper_path%></p>
+      </div>
+    </div>
+  </div>
+</div>
