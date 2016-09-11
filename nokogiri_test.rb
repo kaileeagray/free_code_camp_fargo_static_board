@@ -2,6 +2,9 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 
+
+
+
 url = "https://www.freecodecamp.com/kaileeagray"
 doc = Nokogiri::HTML(open(url))
 puts doc.at_css("title").text

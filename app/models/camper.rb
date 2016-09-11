@@ -12,7 +12,7 @@ class Camper < ApplicationRecord
 
   def fcc_url_valid?
     doc = Nokogiri::HTML(open(self.fcc_url))
-    if doc.css("h1.text-primary")
+    if doc.css(".negative-30")
       self.points = doc.css("h1.text-primary").text.split[1] if doc.css("h1.text-primary")
       self.avatar = doc.at_css(".public-profile-img").attr('src') if doc.at_css(".public-profile-img")
       true
