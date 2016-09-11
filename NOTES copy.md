@@ -87,3 +87,8 @@ edit/delete admin buttons to add later
 </div>
 
 </td>
+
+
+# social_links = doc.at_css("h1.profile-social-icons").css("a").collect do |a|
+#   a.attr("href")
+# end

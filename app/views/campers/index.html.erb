@@ -2,8 +2,7 @@
     <div class="row">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h1 class="panel-title pull-left">Free Code Camp Fargo, ND Leaderboard</h1>
-                <%= link_to "Add your username to this leaderboard!", new_camper_path, :class => "btn btn-primary pull-right"%>
+                <h1 class="panel-title pull-left">(unofficial) Free Code Camp Fargo, ND Leaderboard</h1>
                 <div class="clearfix"></div>
             </div>
             <div class="panel-body">
@@ -29,7 +28,8 @@
                 </table>
             </div>
             <div class="panel-footer">
-                <p>Rankings updated daily. Go to <%=link_to "Free Code Camp", href="http://www.freecodecamp.com", target: "_blank"%> to get closer to the top!</p>
+              <%= link_to "Add username", new_camper_path, :class => "btn btn-primary pull-right"%>
+                <p>Rankings updated daily. Visit <%=link_to "Free Code Camp", href="http://www.freecodecamp.com", target: "_blank"%> to get closer to the top!</p>
             </div>
         </div>
     </div>

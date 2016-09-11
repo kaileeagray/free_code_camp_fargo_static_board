@@ -14,14 +14,21 @@ class Camper < ApplicationRecord
 
   def scrape_fcc
     doc = Nokogiri::HTML(open(self.fcc_url))
-    self.points = doc.css("h1.text-primary").text.split[1] if doc.css("h1.text-primary")
-    self.avatar = doc.at_css(".public-profile-img").attr('src') if doc.at_css(".public-profile-img")
-    self.points = 0 if self.points.nil? || self.points.blank?
-    self.avatar = "no-face.png" if self.avatar.nil? || self.avatar.blank?
-    self.save
+    unless doc.css(".col-md-offset-2").blank?
+      self.points = doc.css("h1.text-primary").text.split[1] if doc.css("h1.text-primary") || 0
+      self.avatar = doc.at_css(".public-profile-img").attr("src")
+      self.save
+    end
+  end
+
+  def self.scrape_all
+    all.each do |camper|
+      camper.scrape_fcc
+    end
   end
 
   def self.get_rank_hash
+    scrape_all
     rank_hash = {}
     Ranker.rank(Camper.all, :by => :points).each do |ranking|
       rank_hash[ranking.rank] = ranking.rankables
