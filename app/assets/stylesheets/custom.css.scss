@@ -4,11 +4,57 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$fcc-green: #006400;
+
+.h1 a {
+  color: black;
+  text-decoration: none;
+}
+/* unvisited link */
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  text-decoration: none;
+}
 
 /* universal */
+.panel {
+  border: 25px solid $gray-medium-light;
+  padding: 25px;
+}
+.container {
+  padding: 0;
+
+}
+
+.container .row {
+  margin-top: 45px;
+  padding-top: 5px;
+  float: center;
+}
 
 body {
-  padding-top: 60px;
+  padding: 30px;
+  margin: 0;
+  background-color: $fcc-green;
+}
+
+body h1 {
+  font-size: 1.7em;
+  padding-top: 0;
 }
 
 section {
@@ -31,84 +77,4 @@ textarea {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-}
-
-
-/* header */
-
-.logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  text-decoration: none;
-
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
-  &:visited {
-    color: white;
-    text-decoration: none;
-  }
-  &:active {
-    color: white;
-    text-decoration: none;
-  }
-  &:link {
-    color: white;
-    text-decoration: none;
-  }
-}
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
-}
-
-.navbar-custom {
-    background-color:#006400;
-    color:#ffffff;
-    border-radius:0;
-}
-
-.navbar .nav > li > a {
-    text-decoration: none;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    color:  #ddd;
-    font-size: 1.2em;
-
-}
-
-.panel-heading h1 {
-    white-space: nowrap;
-    font-size: 1.7em;
-
-    text-overflow: ellipsis;
-    padding-top: 8px;
 }

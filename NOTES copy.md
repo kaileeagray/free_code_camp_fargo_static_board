@@ -92,3 +92,56 @@ edit/delete admin buttons to add later
 # social_links = doc.at_css("h1.profile-social-icons").css("a").collect do |a|
 #   a.attr("href")
 # end
+
+
+
+<header class="navbar navbar-fixed-top navbar-inverse navbar-custom">
+  <div class="container">
+    <%=link_to " Fargo Leaderboard", root_path, class: "logo", target: "_blank"%> | <%=link_to "Free Code Camp", href="http://www.freecodecamp.com", class: "logo", target: "_blank"%>
+
+    <nav>
+      <!-- Brand and toggle get grouped for better mobile display -->
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="navbar" id="bs-example-navbar-1">
+
+    <!-- main nav links -->
+
+
+      <!-- social nav links -->
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Join Fargo's campsite!", "https://www.facebook.com/groups/free.code.camp.fargo/", target: "_blank"%></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+
+
+<header class="navbar navbar-fixed-top navbar-inverse navbar-custom">
+  <div class="container">
+    <%=link_to "Free Code Camp", href="http://www.freecodecamp.com", class: "logo", target: "_blank"%>
+
+    <nav>
+      <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item"><%= link_to "Join Fargo's campsite!", "https://www.facebook.com/groups/free.code.camp.fargo/", target: "_blank"%></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>

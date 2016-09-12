@@ -1,0 +1,31 @@
+.jumbotron {
+  padding:200px 0 140px 0;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  margin-top: 0;
+  font-weight: 300;
+}
+
+.jumbotron-heading a {
+  color: inherit;
+  margin-top: 0;
+  font-weight: 300;
+}
+
+.jumbotron-heading a:hover {
+  color: inherit;
+  margin-top: 0;
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+  margin-top: 0;
+}

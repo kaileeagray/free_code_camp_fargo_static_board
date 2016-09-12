@@ -1,36 +1,29 @@
-<div class="container">
-    <div class="row">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h1 class="panel-title pull-left">(unofficial) Free Code Camp Fargo, ND Leaderboard</h1>
-                <div class="clearfix"></div>
-            </div>
-            <div class="panel-body">
-
-                <table class="table table-striped table-responsive">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th></th>
-                            <th>Username</th>
-                            <th>Points</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% @ranks_and_campers.each do |rank, campers| %>
-                        <%campers.each do |camper|%>
-                        <tr>
-                            <%= render :partial => camper, :locals => {:rank => rank} %>
-                        </tr>
-                        <%end%>
-                        <% end %>
-                    </tbody>
-                </table>
-            </div>
-            <div class="panel-footer">
-              <%= link_to "Add username", new_camper_path, :class => "btn btn-primary pull-right"%>
-                <p>Visit <%=link_to "Free Code Camp", href="http://www.freecodecamp.com", target: "_blank"%> to get closer to the top!</p>
-            </div>
-        </div>
+<section class="jumbotron text-xs-center">
+    <div class="container">
+        <h1 class="jumbotron-heading"><%=link_to "Free Code Camp", href="http://www.freecodecamp.com", target: "_blank"%>
+ | <%= link_to "Fargo, ND", "https://www.facebook.com/groups/free.code.camp.fargo/", target: "_blank"%>
+</h1>
+        <p class="lead text-muted">Unofficial Fargo area leaderboard. <%= link_to "Add your Free Code Camp username!", new_camper_path%>
+</p>
     </div>
-</div>
+</section>
+<div class="panel">
+    <table class="table table-responsive">
+        <thead class="thead-default">
+            <tr>
+                <th>Rank</th>
+                <th></th>
+                <th>Username</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @ranks_and_campers.each do |rank, campers| %>
+            <%campers.each do |camper|%>
+            <tr>
+                <%= render :partial => camper, :locals => {:rank => rank} %>
+            </tr>
+            <%end%>
+            <% end %>
+        </tbody>
+    </table>
