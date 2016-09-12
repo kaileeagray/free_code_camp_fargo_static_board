@@ -36,6 +36,9 @@ section.board {
   padding: 25px;
   border-radius: 10px;
   background-color: white;
+  @media only screen and (max-width: 900px) {
+    border: 5px solid $gray-medium-light;
+  }
 }
 .container {
   padding: 0;
@@ -83,8 +86,6 @@ p {
 }
 
 table{
-
-
     @media only screen and (max-width: 900px) {
         .one{
             display: none;
