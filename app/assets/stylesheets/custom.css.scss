@@ -81,3 +81,13 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+table{
+
+
+    @media only screen and (max-width: 900px) {
+        .one{
+            display: none;
+        }
+    }
+  }
