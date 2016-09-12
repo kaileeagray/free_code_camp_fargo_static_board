@@ -3,7 +3,6 @@ task :fetch_fcc => :environment do
   require 'nokogiri'
   require 'open-uri'
   Camper.all.each do |camper|
-    doc = Nokogiri::HTML(open(camper.fcc_url))
     camper.scrape_fcc
   end
   Camper.where(avatar: "no-face.png").destroy_all
