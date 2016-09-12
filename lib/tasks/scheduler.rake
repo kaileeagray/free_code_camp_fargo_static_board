@@ -6,4 +6,5 @@ task :fetch_fcc => :environment do
     doc = Nokogiri::HTML(open(camper.fcc_url))
     camper.scrape_fcc
   end
+  Camper.where(avatar: "no-face.png").destroy_all
 end
