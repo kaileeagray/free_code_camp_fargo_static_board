@@ -14,9 +14,6 @@ class CampersController < ApplicationController
       redirect_to root_path
     end
 
-    def scrape_camper(camper)
-      camper.fcc_url_valid?
-    end
 
     private
 

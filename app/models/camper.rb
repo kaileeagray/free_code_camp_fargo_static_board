@@ -21,14 +21,7 @@ class Camper < ApplicationRecord
     end
   end
 
-  def self.scrape_all
-    all.each do |camper|
-      camper.scrape_fcc
-    end
-  end
-
   def self.get_rank_hash
-    scrape_all
     rank_hash = {}
     Ranker.rank(Camper.all, :by => :points).each do |ranking|
       rank_hash[ranking.rank] = ranking.rankables
