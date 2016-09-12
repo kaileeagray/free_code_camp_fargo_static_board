@@ -1,4 +1,4 @@
-# Free Code Camp | Fargo, ND Campsite | (unofficial) Camper Leaderboard
+# Free Code Camp | Fargo, ND | (unofficial) Leaderboard
  + Site to view daily leaderboard.
  + Points are scraped from user profiles' on freecodecamp.com.
  + Free Code Camp profiles are linked on leaderboard.
