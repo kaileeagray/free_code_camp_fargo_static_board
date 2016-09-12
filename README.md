@@ -1,11 +1,11 @@
-### Free Code Camp | Fargo, ND Campsite | (unofficial) Camper Leaderboard
+# Free Code Camp | Fargo, ND Campsite | (unofficial) Camper Leaderboard
  + Site to view daily leaderboard.
  + Points are scraped from user profiles' on freecodecamp.com.
  + Free Code Camp profiles are linked on leaderboard.
  + Visit the Heroku site to add your username.
  + Pull requests and improvements welcome!
 
- # Goals
+ ### Goals
  + Add admin features to moderate.
  + Validate usernames -- daily clean out scheduled -- want to validate and display errors on creation.
  + Add resources page
