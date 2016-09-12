@@ -31,19 +31,22 @@ a:active {
 }
 
 /* universal */
-.panel {
+section.board {
   border: 25px solid $gray-medium-light;
   padding: 25px;
+  border-radius: 10px;
+  background-color: white;
 }
 .container {
   padding: 0;
-
 }
 
 .container .row {
   margin-top: 45px;
   padding-top: 5px;
   float: center;
+  background-color: white;
+
 }
 
 body {
